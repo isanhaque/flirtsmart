@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlirtSmart - Dating Tips</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
+    header { background: #ff7aa2; color: white; padding: 1em; text-align: center; }
+    nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
+    .hero { background: #ffe0e9; padding: 50px 20px; text-align: center; }
+    .section { padding: 40px 20px; text-align: center; }
+    button { background: #ff7aa2; border: none; padding: 10px 20px; color: white; font-size: 16px; border-radius: 5px; cursor: pointer; }
+    footer { background: #333; color: white; text-align: center; padding: 20px; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>FlirtSmart</h1>
+  <nav>
+    <a href="#tips">Tips</a>
+    <a href="#starters">Starters</a>
+    <a href="#challenges">Challenges</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Boost Your Confidence. Find Real Connection.</h2>
+  <button onclick="showTip()">Get Your First Tip</button>
+</section>
+
+<section class="section" id="tips">
+  <h2>Dating Tips</h2>
+  <p id="tipDisplay">Click the button above to get a tip!</p>
+</section>
+
+<section class="section" id="starters">
+  <h2>Conversation Starters</h2>
+  <button onclick="showStarter()">Show me a Random Starter!</button>
+  <p id="starterDisplay"></p>
+</section>
+
+<section class="section" id="challenges">
+  <h2>Confidence Challenges</h2>
+  <ul style="list-style:none; padding:0;">
+    <li>✅ Compliment someone's outfit today.</li>
+    <li>✅ Start a conversation with a stranger.</li>
+    <li>✅ Hold eye contact 3 seconds longer.</li>
+    <li>✅ Ask someone about their favorite hobby.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Made with ❤️ by FlirtSmart Team | © 2025</p>
+  <p>"Be bold. Be kind. Be real."</p>
+</footer>
+
+<script>
+const tips = [
+  "Confidence is attractive — practice standing tall.",
+  "Listen twice as much as you speak.",
+  "Compliments should be specific and genuine.",
+  "A good sense of humor beats cheesy pick-up lines.",
+  "Respect boundaries and show kindness."
+];
+
+const starters = [
+  "What's something you're passionate about?",
+  "If you could travel anywhere right now, where would you go?",
+  "What's your favorite way to spend a weekend?",
+  "What's one thing that always makes you laugh?",
+  "Who's someone you admire and why?"
+];
+
+function showTip() {
+  const tip = tips[Math.floor(Math.random() * tips.length)];
+  document.getElementById('tipDisplay').innerText = tip;
+}
+
+function showStarter() {
+  const starter = starters[Math.floor(Math.random() * starters.length)];
+  document.getElementById('starterDisplay').innerText = starter;
+}
+</script>
+
+</body>
+</html>
